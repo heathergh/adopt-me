@@ -4,7 +4,7 @@ const useDropdown = (label, defaultState, options) => {
   const [state, setState] = useState(defaultState);
   const id = `use-drop-down-${label.replace(" ", "").toLowerCase()}`;
 
-  const Dropdown = () => {
+  const Dropdown = () => (
     <label htmlFor={id}>
       {label}
       <select
@@ -21,8 +21,8 @@ const useDropdown = (label, defaultState, options) => {
           </option>
         ))}
       </select>
-    </label>;
-  };
+    </label>
+  );
 
   return [state, Dropdown, setState];
 };
